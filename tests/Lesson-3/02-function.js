@@ -39,30 +39,30 @@
 
 //Ex4
 
-// function isPrime(number) {
-//     if (number < 2) {
-//         return false;
-//     }
-//     for (let i = 2; i <= Math.sqrt(number); i++) {
-//         if (number % i === 0) {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
+function isPrime(number) {
+    if (number < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
-// function fillerArr(arr) {
-//     let primesArr = [];
-//     for (let i = 0; i <= arr.length; i++) {
-//         if (isPrime(i) === true) {
-//             primesArr.push(i);
-//         }
-//     }
-//     return primesArr;
-// }
+function fillerArr(arr) {
+    let primesArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i]) === true) {
+            primesArr.push(i);
+        }
+    }
+    return primesArr;
+}
 
-// let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// console.log(fillerArr(arr));
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(fillerArr(arr));
 
 
 //Ex5
@@ -113,23 +113,25 @@
 // Ex7
 
 // let schoolSupplies = [
-//     { name: "Pen", price: 0 },
-//     { name: "Eraser", price: 0 },
-//     { name: "Ruler", price: 0 }
+//     { name: "Pen", price: 2 },
+//     { name: "Eraser", price: 2 },
+//     { name: "Ruler", price: 2 }
 // ];
 
-// function checkPrice(schoolSupplies) {
+// function checkPrice(arr) {
 //     let sum = 0;
-//     for (let i = 0; i < schoolSupplies.length; i++) {
-//         sum += schoolSupplies[i].price;
-//     }
-//     if (sum <= 0) {
-//         return `Check price again`
-//     }
-//     return `Price OK. Total= ${sum}`;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].price === 0){
+//             return false;
+//         }
+//     }return true;
 // }
-
-// console.log(checkPrice(schoolSupplies))
+// const result = checkPrice(schoolSupplies);
+// if (result ===false){
+//     console.log("trong gio hang  co san pham gia 0 dong")
+// }else{
+//     console.log("trong gio hang khong co san pham gia 0 dong")
+// }
 
 // Ex8
 
@@ -164,51 +166,51 @@
 
 // Ex10
 
-function printMonthName(monthNumber) {
-    switch (monthNumber) {
-        case 1:
-            console.log("Tháng Một");
-            break;
-        case 2:
-            console.log("Tháng Hai");
-            break;
-        case 3:
-            console.log("Tháng Ba");
-            break;
-        case 4:
-            console.log("Tháng Tư");
-            break;
-        case 5:
-            console.log("Tháng Năm");
-            break;
-        case 6:
-            console.log("Tháng Sáu");
-            break;
-        case 7:
-            console.log("Tháng Bảy");
-            break;
-        case 8:
-            console.log("Tháng Tám");
-            break;
-        case 9:
-            console.log("Tháng Chín");
-            break;
-        case 10:
-            console.log("Tháng Mười");
-            break;
-        case 11:
-            console.log("Tháng Mười Một");
-            break;
-        case 12:
-            console.log("Tháng Mười Hai");
-            break;
-        default:
-            console.log("Số tháng không hợp lệ. Nhập từ 1 đến 12.");
-    }
-}
-printMonthName(1);   
-printMonthName(12);  
-printMonthName(15);  
+// function printMonthName(monthNumber) {
+//     switch (monthNumber) {
+//         case 1:
+//             console.log("Tháng Một");
+//             break;
+//         case 2:
+//             console.log("Tháng Hai");
+//             break;
+//         case 3:
+//             console.log("Tháng Ba");
+//             break;
+//         case 4:
+//             console.log("Tháng Tư");
+//             break;
+//         case 5:
+//             console.log("Tháng Năm");
+//             break;
+//         case 6:
+//             console.log("Tháng Sáu");
+//             break;
+//         case 7:
+//             console.log("Tháng Bảy");
+//             break;
+//         case 8:
+//             console.log("Tháng Tám");
+//             break;
+//         case 9:
+//             console.log("Tháng Chín");
+//             break;
+//         case 10:
+//             console.log("Tháng Mười");
+//             break;
+//         case 11:
+//             console.log("Tháng Mười Một");
+//             break;
+//         case 12:
+//             console.log("Tháng Mười Hai");
+//             break;
+//         default:
+//             console.log("Số tháng không hợp lệ. Nhập từ 1 đến 12.");
+//     }
+// }
+// printMonthName(1);   
+// printMonthName(12);  
+// printMonthName(15);  
 
 
 // Ex11

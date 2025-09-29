@@ -10,7 +10,9 @@ test('test 3', async ({ page }) => {
     await test.step('Them 100 todo ', async () => {
         for (let i = 1; i <= 100; i++) {
             await page.locator("//input[@id='new-task']").fill(`To do ${i}`);
-            await page.locator("//button[@id='add-task']").click();
+            await page.locator("//button[@id='add-task']").click({
+                delay: 50
+            });
         }
     });
 
@@ -19,9 +21,11 @@ test('test 3', async ({ page }) => {
 
         for (let i = 1; i <= 100; i++) {
             if (i % 2 != 0){
-            await page.locator(`//button[@id='to-do-${i}-delete']`).click();
+            await page.locator(`//button[@id='to-do-${i}-delete']`).click({
+                delay: 50
+            });
             }
         }
     });
-    
+
 });

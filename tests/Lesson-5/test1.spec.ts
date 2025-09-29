@@ -31,13 +31,15 @@ test('test 1', async ({ page }) => {
 
         await page.locator("//input[@id='favcolor']").fill("#00aaff");
 
+        await page.locator("//div[@class='tooltip']").hover();
+
         await page.locator("//input[@id='newsletter']").click();
 
-        await page.locator("//input[@id='toggleOption']").click(); // khong click duoc luon 
+        // await page.locator("//input[@id='toggleOption']").click(); // khong click duoc luon 
 
         await page.locator("//div[@id='starRating']").click({ position: { x: 50, y: 5 } });
 
-        await page.locator("//input[@id='customDate']").fill("10/02/1999"); // co defect o element nay vi khong fill duoc ?
+        // await page.locator("//input[@id='customDate']").fill("10/02/1999"); // co defect o element nay vi khong fill duoc ?
     });
 
     await test.step('Click Sumbit', async () => {

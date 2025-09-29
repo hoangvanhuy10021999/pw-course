@@ -9,7 +9,7 @@
 //     console.log(i,":",student[i]);
 // }
 
-// ex2
+// d
 
 // const student = {
 //     "name": "50",

@@ -35,9 +35,9 @@ const { reverse } = require("dns");
 
 // Ex3
 
-let arr = [1, 2, 3, 1, 2, 4, 5];
+let arr = [1, 2, 3, 1, 2, 3, 4, 5, 4, 5];
 let count = {
-    
+
 };
 
 for (let i = 0; i < arr.length; i++) {
@@ -51,12 +51,25 @@ for (let i = 0; i < arr.length; i++) {
 console.log(count);
 
 let uniqueNo = [];
-for (let i in count) {
+for (const i of arr) {
     if (count[i] === 1) {
-        uniqueNo.push(Number(i));
+        uniqueNo.push(i);
     }
 }
-console.log("các số duy nhất trong mảng:", uniqueNo); 
+console.log("các số duy nhất trong mảng:", uniqueNo);
+
+// let arr = [1, 2, 3, 1, 2, 4, 5];
+// let count = {};
+
+// for (let num of arr) {
+//     count[num] = (count[num] || 0) + 1;
+// }
+
+// let uniqueNo = arr.filter(num => count[num] === 1);
+
+// console.log(count);
+// console.log("các số duy nhất trong mảng:", uniqueNo);
+
 
 
 
